@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-lg-8 col-12">
+    <ul class="list-unstyled d-flex flex-wrap justify-content-between h-100 align-items-center pt-2">
+      <li>
+        <a href="{{telephone.href}}" >
+          <fa-icon [icon]=telephone.icon class="address-icon"></fa-icon>
+          {{ telephone.name }}</a>
+      </li>
+      <li>
+        <a href="{{address.href}}" >
+          <fa-icon [icon]=address.icon class="address-icon"></fa-icon>
+          {{ address.name }}</a></li>
+      <li>
+        <a href="">
+          <fa-icon [icon]=timeWork.icon  class="address-icon"></fa-icon>
+          {{ timeWork.name }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-lg-4 col-12">
+    <div class="d-flex flex-wrap align-items-center justify-content-end h-100 ">
+      <ul class="list-unstyled d-flex flex-wrap me-sm-4">
+        <li><a href="{{faFacebook.href}}" class="social-icon">
+          <fa-icon [icon]=faFacebook.icon></fa-icon>
+        </a>
+        </li>
+        <li><a href="{{faInstagram.icon}}" class="social-icon">
+          <fa-icon [icon]=faInstagram.icon></fa-icon>
+        </a></li>
+        <li><a href="{{faYoutube.href}}" class="social-icon">
+          <fa-icon [icon]=faYoutube.icon></fa-icon>
+        </a></li>
+      </ul>
+      <div class="button__help">
+        <a href="">Допомога спорту</a>
+      </div>
+    </div>
+  </div>
+</div>

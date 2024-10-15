@@ -1,0 +1,31 @@
+a{
+  font-weight: 600;
+  color: inherit;
+}
+ul{
+  text-align: center;
+  margin: 0;
+}
+.button__help{
+  font-size: 0.9375rem;
+  padding: 8px 15px;
+  background: #FF0000;
+  border: 1px solid transparent;
+  line-height: 1.1665rem;
+}
+
+.address-icon{
+  color: #FF0000;
+  font-size: .875rem;
+  margin-right: 10px;
+}
+
+
+.social-icon{
+  margin-left: 25px;
+  color: #ccc;
+  font-style: normal;
+  font-size: 1.5625rem;
+  font-weight: normal;
+
+}
