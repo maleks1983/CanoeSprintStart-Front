@@ -1,0 +1,82 @@
+a{
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+.dropdown-menu {
+  display: block;
+  margin-bottom: 2px;
+  visibility: hidden; /* Спочатку невидиме */
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+  overflow: hidden; /* Приховати надлишок контенту під час анімації */
+}
+
+.dropdown-menu li a:hover{
+  background-color: #FF0000;
+  color: #fff;
+}
+
+.dropdown a{
+  font-size: 1rem;
+}
+.dropdown-menu li a{
+  font-size: 0.9375rem;
+}
+
+.nav-item.dropdown:hover>a{
+  color:#FF0000;
+}
+
+.nav-item:after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #FF0000;
+  position: absolute;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+
+.nav-item:hover:after {
+  transform: scaleX(1); /* Переходить до повної ширини */
+}
+
+
+.nav-item.dropdown:hover .dropdown-menu {
+  visibility: visible; /* Показати меню */
+  opacity: 1;
+  max-height: 500px; /* Максимальна висота, достатня для вашого меню */
+}
+
+
+
+.search__btn{
+  margin: 0;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #FFFFFFFF;
+  color: #FFFFFFFF;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.red__box:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -21px;
+  width: 75px;
+  height: 101%;
+  transform: skew(-26deg);
+  background-color: #FF0000;
+  z-index: -1;
+}

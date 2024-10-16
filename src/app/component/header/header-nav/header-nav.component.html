@@ -1,1 +1,52 @@
-<p>header-nav works!</p>
+<nav class="navbar navbar-expand-lg navbar-light h-100 p-0">
+  <div class="container-fluid d-flex align-items-stretch h-100">
+    <div class="logo w-25 d-flex align-items-stretch">
+      <a class="navbar-brand w-100 h-100 position-relative" href="#">
+        <img ngSrc="/static/canoe-sprint.png" alt="logo" fill>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse flex-grow-1">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ng-container *ngFor="let nav of navbar">
+          <ng-container
+            *ngTemplateOutlet="nav.list.length>0?dropDownItemsTrue: dropDownItemsFalse; context: {  nav: nav }">
+          </ng-container>
+        </ng-container>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center justify-content-center position-relative red__box">
+      <button class="search__btn">
+        <fa-icon [icon]=faSearch class="address-icon"></fa-icon>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<ng-template #dropDownItemsTrue let-nav="nav">
+  <li class="nav-item dropdown position-relative">
+    <a
+      class="nav-link dropdown-toggle"
+      href="#"
+      id="navbarDropdown"
+      role="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false">
+      {{ nav.name }}
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li *ngFor="let item of nav.list" class="px-3 py-1">
+        <a class="dropdown-item" [attr.href]="item.href">{{ item.name }}</a>
+      </li>
+    </ul>
+  </li>
+</ng-template>
+
+<ng-template #dropDownItemsFalse let-nav="nav">
+  <li class="nav-item position-relative">
+    <a
+      class="nav-link"
+      [attr.href]="nav.href">
+      {{ nav.name }}
+    </a>
+  </li>
+</ng-template>
